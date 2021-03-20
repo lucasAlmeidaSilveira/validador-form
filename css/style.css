@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --primary: #417cff;
+  --secondary: #203E80;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.screen {
+  display: flex;
+  height: 100vh;
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+/* .left-side img{
+  width: 80%;
+  height: auto;
+} */
+
+.right-side {
+  color: #fff;
+  width: 40vw;
+  background-color: #fff;
+  padding: 6rem 3rem 3rem;
+  text-align: center;
+}
+
+.right-side .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.right-side h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+h1 span{
+  font-weight: 300;
+}
+
+.right-side label, p {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.right-side input {
+  color: var(--secondary);
+  width: 400px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--primary);
+  padding: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  outline: 0;
+  opacity: .6;
+  transition: all ease .3s;
+}
+
+.right-side input:focus{
+  opacity: 1
+}
+
+input[type=submit], button{
+  width: 400px;
+  border-radius: 50px;
+  background: var(--primary);
+  text-transform: uppercase;
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 500;
+  padding: 1.2rem;
+  cursor: pointer;
+  opacity: .8;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 48%);
+  transition: all ease .2s
+}
+
+input[type=submit]:hover, button:hover{
+  opacity: 1;
+}
+
+button.login{
+  background: var(--secondary);
+  border: none;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.error{
+  background: #ff0000;
+  color: #fff;
+  padding: .5rem;
+  border-radius: 0 0 1rem 1rem;
+  font-size: .7rem;
+  opacity: .7;
+  border-top: 1px solid #ff0000
+}
