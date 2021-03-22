@@ -27,10 +27,17 @@ let Validator = {
         let rDetails = rules[k].split('=');
         switch(rDetails[0]){
           case 'required':
-            if(input.value == ''){
-              return 'Campo não pode ser vazio'
-
+            if(input.value == '') return 'Campo não pode ser vazio'
+          break;
+          case 'min':
+            if(input.value.length < rDetails[1]){
+              return `Campo tem que ter pelo menos ${rDetails[1]} caracteres`
             }
+          break;
+          case 'email':
+            let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+            if(!regex.test(input.value)) return 'Digite um e-mail válido'
+          break
         }
       }
     }

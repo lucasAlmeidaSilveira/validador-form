@@ -78,6 +78,10 @@ h1 span{
   transition: all ease .3s;
 }
 
+.right-side input[name=email]{
+  text-transform: lowercase;
+}
+
 .right-side input:focus{
   opacity: 1
 }
@@ -118,5 +122,5 @@ a{
   border-radius: 0 0 1rem 1rem;
   font-size: .7rem;
   opacity: .7;
-  border-top: 1px solid #ff0000
+  border-top: 1px solid #ff0000;
 }
